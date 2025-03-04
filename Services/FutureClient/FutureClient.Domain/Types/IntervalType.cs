@@ -12,7 +12,10 @@ public class IntervalType : BaseType
     public static readonly IntervalType FiveMin = new("5m");
     public static readonly IntervalType FifteenMin = new("15m");
     public static readonly IntervalType ThirtyMin = new("30m");
-
+    public static readonly IntervalType OneHour = new("1h");
+    public static readonly IntervalType SixHour = new("6h");
+    public static readonly IntervalType OneDay = new("1d");
+    
     public static IntervalType? GetPropertyValue(string value)
     {
         var myClassType = typeof(IntervalType);
