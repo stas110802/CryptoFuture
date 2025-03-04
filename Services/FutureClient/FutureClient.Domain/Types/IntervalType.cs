@@ -1,6 +1,6 @@
 ﻿using System.Reflection;
 
-namespace FutureClient.Application.Types;
+namespace FutureClient.Domain.Types;
 
 public class IntervalType : BaseType
 {

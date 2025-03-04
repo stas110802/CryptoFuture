@@ -1,4 +1,4 @@
-﻿using FutureClient.Application.Types;
+﻿using FutureClient.Domain.Types;
 using FutureClient.Domain.Options;
 
 namespace FutureClient.Application.Exchanges.Requests;

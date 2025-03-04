@@ -1,5 +1,5 @@
 ﻿using System.Text;
-using FutureClient.Application.Types;
+using FutureClient.Domain.Types;
 
 namespace FutureClient.Domain.Options;
 

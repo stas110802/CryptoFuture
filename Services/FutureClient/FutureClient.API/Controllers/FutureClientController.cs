@@ -1,12 +1,9 @@
 ﻿using FutureClient.Application.Dtos;
 using FutureClient.Application.Mappers;
 using FutureClient.Application.Services;
-using FutureClient.Application.Types;
-using FutureClient.Domain.Entities;
-using FutureClient.Domain.Options;
+using FutureClient.Domain.Types;
 using FutureClient.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 
 namespace FutureClient.API.Controllers;
 

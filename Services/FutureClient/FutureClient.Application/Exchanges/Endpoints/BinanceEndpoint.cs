@@ -1,4 +1,4 @@
-﻿using FutureClient.Application.Types;
+﻿using FutureClient.Domain.Types;
 
 namespace FutureClient.Application.Exchanges.Endpoints;
 

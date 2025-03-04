@@ -1,5 +1,5 @@
 ﻿using FutureClient.Application.Dtos;
-using FutureClient.Application.Types;
+using FutureClient.Domain.Types;
 
 namespace FutureClient.Application.Services;
 

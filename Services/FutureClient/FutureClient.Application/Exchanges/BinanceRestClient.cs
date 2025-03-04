@@ -1,11 +1,10 @@
-﻿using System.Globalization;
-using System.Text;
+﻿using System.Text;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using FutureClient.Application.Exchanges.Endpoints;
 using FutureClient.Application.Exchanges.Requests;
 using FutureClient.Application.Models;
-using FutureClient.Application.Types;
+using FutureClient.Domain.Types;
 using FutureClient.Domain.Options;
 using Microsoft.Extensions.Options;
 

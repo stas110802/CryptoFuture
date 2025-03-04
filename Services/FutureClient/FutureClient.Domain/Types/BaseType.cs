@@ -1,4 +1,4 @@
-﻿namespace FutureClient.Application.Types;
+﻿namespace FutureClient.Domain.Types;
 
 public abstract class BaseType
 {
