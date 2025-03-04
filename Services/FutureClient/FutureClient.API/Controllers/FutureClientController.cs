@@ -2,6 +2,7 @@
 using FutureClient.Application.Mappers;
 using FutureClient.Application.Services;
 using FutureClient.Application.Types;
+using FutureClient.Domain.Entities;
 using FutureClient.Domain.Options;
 using FutureClient.Domain.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -33,11 +34,20 @@ public class FutureClientController : Controller
         var result = await _futureService.CalculateQuarterFutureDifferenceAsync(currency, intervalType, startDate, endDate);
         
         var dbFutureDifference = FutureServiceMapper.MapToFutureDifference(result);
-        //await _futureRepository.AddQuarterFutureDifferenceAsync(dbFutureDifference);
-        //await _futureRepository.SaveChangesAsync();
+        await _futureRepository.AddQuarterFutureDifferenceAsync(dbFutureDifference);
+        await _futureRepository.SaveChangesAsync();
         
         var readDto = FutureServiceMapper.MapToFutureDifferenceReadDto(result);
         
         return Ok(readDto);
+    }
+    
+    [HttpGet("get-all-fd")]
+    public async Task<ActionResult<IEnumerable<FutureDifferenceReadDto>>> GetAllDifferences()
+    {
+        var entityDifferences = await _futureRepository.GetAllQuarterFutureDifferenceAsync();
+        var dtoResults = entityDifferences.Select(FutureServiceMapper.MapToFutureDifferenceReadDto).ToList();
+        
+        return Ok(dtoResults);
     }
 }

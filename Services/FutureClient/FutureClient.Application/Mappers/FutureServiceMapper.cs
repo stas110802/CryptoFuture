@@ -14,11 +14,21 @@ public static class FutureServiceMapper
             EndTime = futureDifference.EndTime,
             Currency = futureDifference.Currency,
             CurrentQuarterPrice = futureDifference.CurrentQuarterPrice,
-            NextQuarterPrice = futureDifference.NextQuarterPrice
+            NextQuarterPrice = futureDifference.NextQuarterPrice,
+            Difference = futureDifference.Difference
         };
     }
     
     public static FutureDifferenceReadDto MapToFutureDifferenceReadDto(FutureDifferenceServiceDto futureDifference)
+    {
+        return new FutureDifferenceReadDto
+        {
+            Currency = futureDifference.Currency,
+            Difference = futureDifference.Difference
+        };
+    }
+    
+    public static FutureDifferenceReadDto MapToFutureDifferenceReadDto(FutureDifference futureDifference)
     {
         return new FutureDifferenceReadDto
         {

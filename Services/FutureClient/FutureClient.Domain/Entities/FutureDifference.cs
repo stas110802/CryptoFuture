@@ -9,5 +9,5 @@ public class FutureDifference
     public string Currency { get; set; } = string.Empty;
     public decimal CurrentQuarterPrice { get; set; } 
     public decimal NextQuarterPrice { get; set; }
-    public decimal Difference => CurrentQuarterPrice - NextQuarterPrice;
+    public decimal Difference { get; set; }
 }

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: future-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: futureservice
+  template:
+    metadata:
+      labels:
+        app: futureservice
+    spec:
+      containers:
+        - name: futureservice
+          image: stas110802/cryptofuture.futureservice:latest
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: future-clusterip-srv
+spec:
+  type: ClusterIP
+  selector:
+    app: futureservice
+  ports:
+    - name: futureservice
+      protocol: TCP
+      port: 8081
+      targetPort: 8080

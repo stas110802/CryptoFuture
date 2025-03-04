@@ -10,6 +10,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutureClient.API", "Service
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutureClient.Infrastructure", "Services\FutureClient\FutureClient.Infrastructure\FutureClient.Infrastructure.csproj", "{EEC4EB45-6CE8-4B1D-AEB9-4785B98662CB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "K8S", "K8S", "{5728399C-ED25-42C8-9E8F-0E31C78FF1CE}"
+	ProjectSection(SolutionItems) = preProject
+		K8S\postgresql-future-deployment.yml = K8S\postgresql-future-deployment.yml
+		K8S\local-pvc.yml = K8S\local-pvc.yml
+		K8S\future-np-srv.yml = K8S\future-np-srv.yml
+		K8S\future-deployment.yml = K8S\future-deployment.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
